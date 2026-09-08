@@ -37,3 +37,7 @@ Example booking payload:
 ```
 
 This starter is suitable for local development. For production, add CSRF protection for browser forms, rotate secrets, use HTTPS, configure a production WSGI server, and apply stronger validation and audit logging.
+
+## Test every page and flow
+
+Start the server with `python app.py`, then run `python test_pages.py`. The browser test uses Chromium to render the homepage, login page, registration page, authenticated patient homepage, booking confirmation, and admin dashboard. It also exercises patient registration, patient login, appointment booking, and admin login. Screenshots are written to the local `preview/` directory and intentionally excluded from Git.
