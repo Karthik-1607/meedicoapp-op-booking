@@ -24,6 +24,12 @@ python app.py
 
 Open `http://127.0.0.1:5000`. The development admin account is `admin@meedicoapp.local` / `admin123`; change it before production use.
 
+## Run directly from GitHub without downloading files
+
+The repository includes `render.yaml` for deployment on Render. Go to [render.com](https://render.com), sign in with GitHub, choose **New → Blueprint**, select `Karthik-1607/meedicoapp-op-booking`, and click **Apply**. Render will install the dependencies, start Gunicorn, and provide a public HTTPS URL. Open that URL to use the homepage, registration, login, booking flow, and admin dashboard. The first deployment may take a few minutes.
+
+The included SQLite database is suitable for a demo or evaluation deployment. For production, use a managed database because free web-service filesystems may not persist SQLite data across redeploys.
+
 Optional mail settings can be provided with `MAIL_SERVER`, `MAIL_PORT`, `MAIL_USE_TLS`, `MAIL_USERNAME`, `MAIL_PASSWORD`, and `MAIL_DEFAULT_SENDER`. Set `SECRET_KEY`, `JWT_SECRET_KEY`, and `DATABASE_PATH` in the deployment environment.
 
 ## API

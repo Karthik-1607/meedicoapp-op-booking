@@ -179,6 +179,10 @@ def api_bookings():
 
 if __name__ == "__main__":
     db.init_db()
-    app.run(debug=os.getenv("FLASK_DEBUG", "true").lower() == "true")
+    app.run(
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", "5000")),
+        debug=os.getenv("FLASK_DEBUG", "true").lower() == "true",
+    )
 else:
     db.init_db()
